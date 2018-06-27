@@ -29,6 +29,7 @@ combat selon le tableau ci-dessous :
 |-|-|-|
 |Minimum|50|5|
 |Maximum|300|20|
+
 Lors de sa phase d’attaque, le monstre à une chance de 10% de faire une attaque critique. Une
 attaque critique est de 2 fois ses dégâts normaux.
 Déroulement du tour d’un joueur
