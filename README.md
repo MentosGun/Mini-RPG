@@ -20,7 +20,8 @@ Pour le moment, seules 3 classes de personnages sont à créer :
 |Guerrier|200|10|
 |Mage|100|20|
 |Soigneur|50|5|
-###Le monstre
+
+### Le monstre
 Le monstre a les caractéristiques suivantes et celles-ci sont choisies aléatoirement au début du
 combat selon le tableau ci-dessous :
 
@@ -42,6 +43,7 @@ Le joueur peut ensuite choisir l’une des actions suivantes, en fonction de sa 
 |Guerrier|X||||
 |Mage|X|X||
 |Soigneur|X||X|
+
 ### Fin du combat
 Si le monstre est battu, un message de victoire est affiché avec un récapitulatif des PVs de chaque
 joueur.
