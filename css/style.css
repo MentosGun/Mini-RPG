@@ -45,7 +45,7 @@ header h1 {
 
 .creation > input {
   border-color: rgb(200, 0, 0);
-  width: 50%;
+  width: 27%;
   text-align: center;
   background-color: rgb(0, 0, 0);
   font-size: 1.3em;
@@ -62,7 +62,18 @@ header h1 {
 }
 
 .frame label {
-  color: rgb(200, 0, 0);
+  color: rgb(200, 200, 200);
+}
+
+.error {
+  color: rgb(255, 0, 0);
+  font-size: 1.2em;
+  position: absolute;
+  margin-left: .5em;
+}
+
+#nameError {
+  margin : .5em;
 }
 
 .button {

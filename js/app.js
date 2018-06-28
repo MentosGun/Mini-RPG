@@ -7,17 +7,29 @@ let app = {
     startRestartFrame.style.display = "none"
     validateNumberOfPlayersButton.onclick = function() {
       // console.log(validateNumberOfPlayers())
-      let numberOfPlayers = validateNumberOfPlayers()
-      if (Number(numberOfPlayers) >= 1 && Number(numberOfPlayers) <= 4) {
+      let numberOfPlayers = checkRadio('.selectPlayersRadio')
+      if (Number(numberOfPlayers) < 1 || Number(numberOfPlayers) > 4) {
         // console.log(numberOfPlayers)
-        showPlayersFrame(numberOfPlayers)
+        playersRadioError.innerHTML = "You have to select a number!"
       }
       else {
-        throw new Error('Between 1 and 4 players only')
+        showPlayersFrame(numberOfPlayers)
+        playersRadioError.innerHTML = ""
       }
     }
     playerCreateButton.onclick = function() {
       createPlayer()
+    }
+    restartButton.onclick = function() {
+      players = null
+      playerList = []
+      uncheckRadio('.selectPlayersRadio')
+      uncheckRadio('.selectClassRadio')
+      emptyList()
+      app.init()
+    }
+    startButton.onclick = function() {
+      game.start()
     }
   }
 }

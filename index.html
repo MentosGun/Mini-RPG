@@ -17,41 +17,54 @@
       <main>
         <div class="selectPlayers frame">
           <p class="germanOne">Select the number of Heros</p>
-          <input id="select1" class="selectPlayersRadio" type="radio" name="select" value="1">
-          <label for="select1">1</label>
-          <input id="select2" class="selectPlayersRadio" type="radio" name="select" value="2">
-          <label for="select2">2</label>
-          <input id="select3" class="selectPlayersRadio" type="radio" name="select" value="3">
-          <label for="select3">3</label>
-          <input id="select4" class="selectPlayersRadio" type="radio" name="select" value="4">
-          <label for="select4">4</label>
-          <button class="button" id="numberOfPlayersConfirm" type="button">Validate</button>
+          <label for="select1">
+            <input id="select1" class="selectPlayersRadio" type="radio" name="select" value="1">
+            1
+          </label>
+          <label for="select2">
+            <input id="select2" class="selectPlayersRadio" type="radio" name="select" value="2">
+            2
+          </label>
+          <label for="select3">
+            <input id="select3" class="selectPlayersRadio" type="radio" name="select" value="3">
+            3
+          </label>
+          <label for="select4">
+            <input id="select4" class="selectPlayersRadio" type="radio" name="select" value="4">
+            4
+          </label>
+          <button id="numberOfPlayersConfirm" class="button" type="button">Validate</button>
+          <span id="playersRadioError" class="error"></span>
         </div>
         <div class="creation frame">
           <input id="creationInput" type="text" name="player" placeholder="Name your Hero!">
+          <span id="nameError" class="error"></span>
           <div class="playerClasses">
-            <input id="warriorRadio" type="radio" name="heroClass" value="Warrior">
-            <label for="warriorRadio">Warrior</label>
-            <input id="mageRadio" type="radio" name="heroClass" value="Mage">
-            <label for="mageRadio">Mage</label>
-            <input id="healerRadio" type="radio" name="heroClass" value="Healer">
-            <label for="healerRadio">Healer</label>
+            <label for="warriorRadio">
+              <input id="warriorRadio" class="selectClassRadio" type="radio" name="heroClass" value="Warrior">
+              Warrior
+            </label>
+            <label for="mageRadio">
+              <input id="mageRadio" class="selectClassRadio" type="radio" name="heroClass" value="Mage">
+              Mage
+            </label>
+            <label for="healerRadio">
+              <input id="healerRadio" class="selectClassRadio" type="radio" name="heroClass" value="Healer">
+              Healer
+            </label>
+            <span id="classError" class="error"></span>
           </div>
-          <button class="button" id="playerCreate" type="button">Create Your Hero</button>
+          <button id="playerCreate" class="button" type="button">Create Your Hero</button>
         </div>
-        <div class="playerList frame">
-          <!--<span>MentosGun</span>
-          <span>Antoine</span>
-          <span>Billy</span>
-          <span>Regis</span>-->
-        </div>
+        <div class="playerList frame"></div>
         <div class="startRestart frame">
-          <button class="button" type="button">Start</button>
-          <button class="button" type="button">Restart</button>
+          <button id="startButton" class="button" type="button">Start</button>
+          <button id="restartButton" class="button" type="button">Restart</button>
         </div>
       </main>
     </div>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/const.js"></script>
     <script type="text/javascript" src="js/vars.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
