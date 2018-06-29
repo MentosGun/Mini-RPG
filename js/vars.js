@@ -1,3 +1,3 @@
 let players = null
 let playerList = []
-let creature = null
+let creaturePvs = null

@@ -82,7 +82,8 @@ addPlayer = function(playerName, playerClass) {
   playerClass = playerClass.toLowerCase()
   playerList.push({
     "name": playerName,
-    "heroClass": rpgClasses[playerClass]
+    "heroClass": rpgClasses[playerClass],
+    "dead": false
   })
   let newPlayer = document.createElement('span')
   newPlayer.innerHTML = playerName
@@ -109,6 +110,10 @@ emptyList = function() {
 
 let gameFunc = {
   generateCreature: function() {
-    console.log('Creating Creature');
+    let pvs = gameFunc.generatePvs(creatureSkills.minPvs, creatureSkills.maxPvs)
+    creaturePvs = pvs
+  },
+  generatePvs: function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
   }
 }

@@ -5,6 +5,7 @@ let app = {
     creationFrame.style.display = "none"
     playerListFrame.style.display = "none"
     startRestartFrame.style.display = "none"
+    applicationFrame.style.display = 'none'
     validateNumberOfPlayersButton.onclick = function() {
       // console.log(validateNumberOfPlayers())
       let numberOfPlayers = checkRadio('.selectPlayersRadio')
@@ -21,15 +22,13 @@ let app = {
       createPlayer()
     }
     restartButton.onclick = function() {
-      players = null
-      playerList = []
-      uncheckRadio('.selectPlayersRadio')
-      uncheckRadio('.selectClassRadio')
-      emptyList()
-      app.init()
+      game.restart()
     }
     startButton.onclick = function() {
       game.start()
+    }
+    stopButton.onclick = function() {
+      game.restart()
     }
   }
 }

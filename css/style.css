@@ -104,3 +104,61 @@ header h1 {
 .startRestart button {
   margin: auto 3em;
 }
+
+#stopButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15%;
+}
+
+.heroFrame {
+  width: 50%;
+  position: absolute;
+}
+
+.heroFrame ul {
+  font-size: 1.3em;
+  color: rgb(200, 200, 200);
+  margin: 1em 0;
+}
+
+.heroFrame li {
+  margin: .4em 0;
+}
+
+.heroPic {
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  left: 10%;
+  top: 1em;
+}
+
+.heroText {
+  position: absolute;
+  left: 30%;
+  top: 2em;
+}
+
+.heroText p {
+  font-size: 1.3em;
+  color: rgb(200, 200, 200);
+  margin: 1em 0;
+}
+
+.heroName {
+  color: rgb(200, 0, 0);
+  font-family: "Germania One", cursive;
+  font-size: 2em;
+}
+
+.creatureFrame {
+  position: relative;
+  left: 37%;
+}
+
+.creaturePic {
+  width: 100px;
+  height: 200px;
+}
