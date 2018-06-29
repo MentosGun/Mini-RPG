@@ -59,25 +59,22 @@
         <div class="playerList frame"></div>
         <div class="startRestart frame">
           <button id="startButton" class="button" type="button">Start</button>
-          <button id="restartButton" class="button" type="button">Restart</button>
+          <button id="redefineButton" class="button" type="button">Redefine</button>
         </div>
         <div class="application frame">
-          <button id="stopButton" class="button" type="button">Restart</button>
+          <button id="stopButton" class="button" type="button">Redefine</button>
           <div class="heroFrame">
-            <img class="heroPic" src="img/warrior.png" alt="heroClass">
+            <img class="heroPic" alt="heroClass">
             <div class="heroText">
-              <h2 class="heroName">Mentos Gun</h2>
-              <ul>
-                <li>Class : Warrior</li>
-                <li>HP : 300</li>
-              </ul>
+              <h2 class="heroName"></h2>
+              <ul id="heroSkills"></ul>
             </div>
           </div>
           <div class="creatureFrame">
             <img class="creaturePic" src="img/creature.png" alt="creature">
             <div class="heroText">
               <h2 class="heroName">Creature</h2>
-              <p>HP : 150</p>
+              <p id="hpLeft"></p>
             </div>
           </div>
           <div class="actionFrame">

@@ -1,3 +1,5 @@
 let players = null
 let playerList = []
-let creaturePvs = null
+let copyList = null
+let creatureHp = null
+let turn = 0

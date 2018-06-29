@@ -9,26 +9,33 @@ const applicationFrame = document.querySelector('.application')
 const validateNumberOfPlayersButton = document.querySelector('#numberOfPlayersConfirm')
 const playerCreateButton = document.querySelector('#playerCreate')
 const startButton = document.querySelector('#startButton')
-const restartButton = document.querySelector('#restartButton')
+const redefineButton = document.querySelector('#redefineButton')
 const stopButton = document.querySelector('#stopButton')
+const attackButton = document.querySelector('#attack')
+const healSelfButton = document.querySelector('#healSelf')
+const healButton = document.querySelector('#heal')
 
 // Other constants
 const creationInput = document.querySelector("#creationInput")
 const nameError = document.querySelector('#nameError')
 const classError = document.querySelector('#classError')
 const playersRadioError = document.querySelector('#playersRadioError')
+const heroPic = document.querySelector('.heroPic')
+const nameOfHero = document.querySelector('.heroName')
+const skillsOfHero = document.querySelector('#heroSkills')
+const hpLeft = document.querySelector('#hpLeft')
 
 // Creation objects
 const creatureSkills = {
-  "minPvs": 50,
-  "maxPvs": 300,
+  "minHp": 50,
+  "maxHp": 300,
   "minDamage": 5,
   "maxDamage": 20
 }
 const rpgClasses = {
   "warrior": {
     "name": "warrior",
-    "pvs": 200,
+    "hp": 200,
     "damage": 10,
     "attack": true,
     "healSelf": false,
@@ -36,7 +43,7 @@ const rpgClasses = {
   },
   "mage": {
     "name": "mage",
-    "pvs": 100,
+    "hp": 100,
     "damage": 20,
     "attack": true,
     "healSelf": true,
@@ -44,7 +51,7 @@ const rpgClasses = {
   },
   "healer": {
     "name": "healer",
-    "pvs": 50,
+    "hp": 50,
     "damage": 5,
     "attack": true,
     "healSelf": false,

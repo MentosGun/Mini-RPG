@@ -21,10 +21,11 @@ let app = {
     playerCreateButton.onclick = function() {
       createPlayer()
     }
-    restartButton.onclick = function() {
+    redefineButton.onclick = function() {
       game.restart()
     }
     startButton.onclick = function() {
+      copyList = playerList
       game.start()
     }
     stopButton.onclick = function() {

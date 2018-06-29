@@ -161,4 +161,5 @@ header h1 {
 .creaturePic {
   width: 100px;
   height: 200px;
+  margin-top: .8em;
 }
