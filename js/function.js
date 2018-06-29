@@ -82,7 +82,7 @@ addPlayer = function(playerName, playerClass) {
   playerClass = playerClass.toLowerCase()
   playerList.push({
     "name": playerName,
-    "heroClass": rpgClasses.$[playerClass].name
+    "heroClass": rpgClasses[playerClass]
   })
   let newPlayer = document.createElement('span')
   newPlayer.innerHTML = playerName
