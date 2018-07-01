@@ -7,6 +7,7 @@ let app = {
     selectTheHero.style.display = "none"
     startRestartFrame.style.display = "none"
     applicationFrame.style.display = 'none'
+    endFrame.style.display = 'none'
     validateNumberOfPlayersButton.onclick = function() {
       // console.log(validateNumberOfPlayers())
       let numberOfPlayers = checkRadio('.selectPlayersRadio')
@@ -31,6 +32,9 @@ let app = {
     }
     stopButton.onclick = function() {
       game.restart()
+    }
+    restartButton.onclick = function() {
+      game.restartSameGame()
     }
   }
 }

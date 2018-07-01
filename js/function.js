@@ -123,11 +123,26 @@ let gameFunc = {
       skillsOfHero.removeChild(skillsOfHero.firstChild);
     }
     let playerHero = playerList[turn].heroClass
+    gameFunc.hideShowActions(playerHero.healSelf, playerHero.heal)
     if (playerHero.hp > 0) {
       gameFunc.insertSkills(playerHero.name, playerHero.hp)
     }
     else {
       game.deletePlayers()
+    }
+  },
+  hideShowActions: function(healSelf, heal) {
+    if (healSelf) {
+      healSelfButton.style.display = "initial"
+    }
+    else {
+      healSelfButton.style.display = "none"
+    }
+    if (heal) {
+      healButton.style.display = "initial"
+    }
+    else {
+      healButton.style.display = "none"
     }
   },
   insertSkills: function(typeClass, heroHp) {
@@ -137,7 +152,8 @@ let gameFunc = {
     let playerHP = document.createElement('li')
     playerType.innerHTML = "Class : " + typeClass.charAt(0).toUpperCase() + typeClass.substring(1).toLowerCase()
     playerHP.innerHTML = "HP : " + heroHp
-    skillsOfHero.appendChild(playerType).appendChild(playerHP)
+    skillsOfHero.appendChild(playerType)
+    skillsOfHero.appendChild(playerHP)
     hpLeft.innerHTML = creatureHp
   },
   attackCreature: function() {
@@ -149,7 +165,7 @@ let gameFunc = {
     }
     else {
       creatureHp = 0
-      console.log("You Win");
+      game.winning()
     }
   },
   restoreSelfHp: function() {

@@ -5,6 +5,8 @@ const playerListFrame = document.querySelector('.playerList')
 const startRestartFrame = document.querySelector('.startRestart')
 const applicationFrame = document.querySelector('.application')
 const actionFrame = document.querySelector('.actionFrame')
+const endFrame = document.querySelector('.endFrame')
+const endFrameText = document.querySelector('.endText')
 
 // Button constants
 const validateNumberOfPlayersButton = document.querySelector('#numberOfPlayersConfirm')
@@ -15,6 +17,7 @@ const stopButton = document.querySelector('#stopButton')
 const attackButton = document.querySelector('#attack')
 const healSelfButton = document.querySelector('#healSelf')
 const healButton = document.querySelector('#heal')
+const restartButton = document.querySelector('#restart')
 
 // Other constants
 const creationInput = document.querySelector("#creationInput")
@@ -26,6 +29,11 @@ const nameOfHero = document.querySelector('.heroName')
 const skillsOfHero = document.querySelector('#heroSkills')
 const hpLeft = document.querySelector('#hpLeft')
 const selectTheHero = document.querySelector('.selectFrame')
+
+// End constants
+const youWin = "Congratulations! You killed the Creature!"
+const youAllLose = "The Creature killed every Heros!"
+const youLose = "The Creature killed your Hero!"
 
 // Creation objects
 const creatureSkills = {

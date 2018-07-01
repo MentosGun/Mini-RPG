@@ -170,3 +170,9 @@ header h1 {
   height: 200px;
   margin-top: .8em;
 }
+
+.endText {
+  font-family: "Germania One";
+  color: rgb(200, 200, 200);
+  font-size: 2em;
+}

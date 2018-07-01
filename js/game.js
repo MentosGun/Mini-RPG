@@ -10,8 +10,10 @@ let game = {
     app.init()
   },
   start: function() {
+    turn = 0
     startRestartFrame.style.display = 'none'
     applicationFrame.style.display = 'block'
+    actionFrame.style.display = "block"
     gameFunc.generateCreature()
   },
   loops: function() {
@@ -37,7 +39,35 @@ let game = {
       }
     }
     else {
-      console.log("You Lose!");
+      game.loosing()
     }
+  },
+  winning: function() {
+    actionFrame.style.display = "none"
+    while (skillsOfHero.firstChild) {
+      skillsOfHero.removeChild(skillsOfHero.firstChild);
+    }
+    hpLeft.innerHTML = 0
+    endFrame.style.display = "block"
+    endFrameText.innerHTML = youWin
+  },
+  loosing: function() {
+    actionFrame.style.display = "none"
+    while (skillsOfHero.firstChild) {
+      skillsOfHero.removeChild(skillsOfHero.firstChild);
+    }
+    if (players > 1) {
+      endFrame.style.display = "block"
+      endFrameText.innerHTML = youAllLose
+    }
+    else {
+      endFrame.style.display = "block"
+      endFrameText.innerHTML = youLose
+    }
+  },
+  restartSameGame: function() {
+    endFrame.style.display = "none"
+    playerList = JSON.parse(JSON.stringify(copyList))
+    game.start()
   }
 }
