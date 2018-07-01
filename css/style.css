@@ -90,6 +90,13 @@ header h1 {
   padding: 2em;
 }
 
+.selectFrame {
+  font-family: "Germania One", cursive;
+  color: rgb(200, 200, 200);
+  font-size: 2em;
+  margin: .25em;
+}
+
 .playerList span {
   border: 1px rgb(200, 0, 0) solid;
   color: rgb(255, 0, 0);

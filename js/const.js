@@ -24,6 +24,7 @@ const heroPic = document.querySelector('.heroPic')
 const nameOfHero = document.querySelector('.heroName')
 const skillsOfHero = document.querySelector('#heroSkills')
 const hpLeft = document.querySelector('#hpLeft')
+const selectTheHero = document.querySelector('.selectFrame')
 
 // Creation objects
 const creatureSkills = {

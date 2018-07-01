@@ -4,6 +4,7 @@ let app = {
     selectPlayersFrame.style.display = "block"
     creationFrame.style.display = "none"
     playerListFrame.style.display = "none"
+    selectTheHero.style.display = "none"
     startRestartFrame.style.display = "none"
     applicationFrame.style.display = 'none'
     validateNumberOfPlayersButton.onclick = function() {

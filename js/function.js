@@ -177,11 +177,19 @@ let gameFunc = {
     playerList[turn].heroClass.hp -= hit
   },
   selectPlayerToHeal: function() {
+    selectTheHero.style.display = "block"
     let children = document.querySelectorAll('.singlePlayer')
     for (var i = 0; i < children.length; i++) {
+      children[i].style.cursor = "pointer"
       children[i].onclick = function(children, i) {
-        console.log(children[i].textContent);
+        gameFunc.healTheHero(this.textContent);
       }
     }
+  },
+  healTheHero: function(heroName) {
+    let hero = playerList.find(function(element) {
+      return element.name === heroName;
+    })
+    console.log(hero)
   }
 }
