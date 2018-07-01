@@ -82,7 +82,7 @@ addPlayer = function(playerName, playerClass) {
   playerClass = playerClass.toLowerCase()
   playerList.push({
     "name": playerName,
-    "heroClass": rpgClasses[playerClass],
+    "heroClass": Object.assign({}, rpgClasses[playerClass]),
     "dead": false
   })
   let newPlayer = document.createElement('span')
@@ -159,8 +159,6 @@ let gameFunc = {
   },
   healPlayer: function() {
     gameFunc.selectPlayerToHeal()
-    // gameFunc.creatureHit()
-    // gameFunc.changePlayer()
   },
   changePlayer: function() {
     if (turn >= playerList.length - 1) {
@@ -177,6 +175,7 @@ let gameFunc = {
     playerList[turn].heroClass.hp -= hit
   },
   selectPlayerToHeal: function() {
+    actionFrame.style.display = "none"
     selectTheHero.style.display = "block"
     let children = document.querySelectorAll('.singlePlayer')
     for (var i = 0; i < children.length; i++) {
@@ -190,6 +189,10 @@ let gameFunc = {
     let hero = playerList.find(function(element) {
       return element.name === heroName;
     })
-    console.log(hero)
+    hero.heroClass.hp += 30
+    gameFunc.creatureHit()
+    gameFunc.changePlayer()
+    actionFrame.style.display = "block"
+    selectTheHero.style.display = "none"
   }
 }

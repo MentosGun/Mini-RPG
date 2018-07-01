@@ -4,6 +4,7 @@ const creationFrame = document.querySelector('.creation')
 const playerListFrame = document.querySelector('.playerList')
 const startRestartFrame = document.querySelector('.startRestart')
 const applicationFrame = document.querySelector('.application')
+const actionFrame = document.querySelector('.actionFrame')
 
 // Button constants
 const validateNumberOfPlayersButton = document.querySelector('#numberOfPlayersConfirm')
@@ -38,7 +39,6 @@ const rpgClasses = {
     "name": "warrior",
     "hp": 200,
     "damage": 10,
-    "attack": true,
     "healSelf": false,
     "heal": false
   },
@@ -46,7 +46,6 @@ const rpgClasses = {
     "name": "mage",
     "hp": 100,
     "damage": 20,
-    "attack": true,
     "healSelf": true,
     "heal": false
   },
@@ -54,7 +53,6 @@ const rpgClasses = {
     "name": "healer",
     "hp": 50,
     "damage": 5,
-    "attack": true,
     "healSelf": false,
     "heal": true
   }

@@ -26,7 +26,7 @@ let app = {
       game.restart()
     }
     startButton.onclick = function() {
-      copyList = playerList
+      copyList = JSON.parse(JSON.stringify(playerList))
       game.start()
     }
     stopButton.onclick = function() {
